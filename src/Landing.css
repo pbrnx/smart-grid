@@ -1,0 +1,21 @@
+/* ShadowBox.css */
+
+.shadow-box-container {
+    display: flex;
+    justify-content: flex-end; /* Alinhamento horizontal à direita */
+    align-items: center; /* Alinhamento vertical no centro */
+    height: 100dvh; /* Altura total da viewport */
+   
+  }
+  
+  .shadow-box {
+    min-width: 45%;
+    height: 50%;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    margin-right: 5%; /* Distância à direita em relação à largura da viewport */
+  }
+  
+  

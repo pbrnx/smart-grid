@@ -1,11 +1,14 @@
 import './App.css';
-import Topo from './Header';
+import Cabecalho from './Cabecalho';
+import Landing from './Landing';
 
 
 function App() {
   return (
-    <Topo></Topo>
-    
+    <>
+    <Cabecalho></Cabecalho>
+    <Landing></Landing>
+    </>
   );
 }
 
