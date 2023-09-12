@@ -1,0 +1,22 @@
+/* Footer.css */
+/* Footer.css */
+
+.footer-container {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  position: fixed; /* Make the footer stay fixed at the bottom */
+  bottom: 0; /* Position it at the bottom of the viewport */
+  width: 100%; /* Full width */
+}
+
+  
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Estilize o texto do rodapé conforme necessário */
+  

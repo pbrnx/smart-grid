@@ -1,21 +1,56 @@
-/* ShadowBox.css */
+.box-container {
+  display: flex;
+  justify-content: flex-end; /* Alinhamento horizontal à direita */
+  align-items: center; /* Alinhamento vertical no centro */
+  flex-wrap: wrap; /* Permitir que os elementos quebrem para a próxima linha em telas menores */
+}
 
-.shadow-box-container {
-    display: flex;
-    justify-content: flex-end; /* Alinhamento horizontal à direita */
-    align-items: center; /* Alinhamento vertical no centro */
-    height: 100dvh; /* Altura total da viewport */
-   
+.content {
+  flex: 1; /* Ocupa todo o espaço disponível à esquerda do elemento .box */
+}
+
+.box {
+  width: 50%;
+  min-width: 50%;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  margin-right: 5%; /* Distância à direita em relação à largura da viewport */
+}
+
+.titulo {
+  text-align: end;
+}
+
+.titulo2 {
+  text-align:end;
+  text-justify: ju;
+}
+
+.button-container {
+  text-align: center; /* Centralize o botão horizontalmente */
+  margin-top: 20px; /* Adicione margem acima do botão para separá-lo do texto (ajuste conforme necessário) */
+}
+
+.saiba-mais-button {
+  background-color: #007bff; /* Cor de fundo do botão (ajuste conforme necessário) */
+  color: #fff; /* Cor do texto do botão (ajuste conforme necessário) */
+  border: none;
+  padding: 10px 20px; /* Espaçamento interno do botão (ajuste conforme necessário) */
+  font-size: 16px; /* Tamanho da fonte (ajuste conforme necessário) */
+  cursor: pointer;
+  border-radius: 5px; /* Borda arredondada (ajuste conforme necessário) */
+}
+
+
+@media (max-width: 768px) {
+  .box-container {
+    flex-direction: column; /* Empilhe os elementos verticalmente em telas menores */
+    align-items: center; /* Centralize na vertical em telas menores */
   }
-  
-  .shadow-box {
-    min-width: 45%;
-    height: 50%;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.3);
-    padding: 20px;
-    margin-right: 5%; /* Distância à direita em relação à largura da viewport */
+
+  .box {
+    width: 100%;
+    margin-right: 0; /* Remova a margem à direita em telas menores */
   }
-  
-  
+}

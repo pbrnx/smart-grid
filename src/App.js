@@ -1,6 +1,7 @@
 import './App.css';
 import Cabecalho from './Cabecalho';
 import Landing from './Landing';
+import Rodape from './Rodape';
 
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
     <>
     <Cabecalho></Cabecalho>
     <Landing></Landing>
+    <Rodape></Rodape>
     </>
   );
 }
