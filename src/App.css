@@ -16,7 +16,7 @@ body {
 
 
 header {
-    background-color: #fdff8b;
+    background-color: #ffd900;
     color: #000000;
     display: flex;
     align-items: center;
@@ -45,7 +45,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #ced1ff;
+    color: #ffffff;
 }
 
 

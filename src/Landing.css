@@ -1,12 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+
+
 .box-container {
   display: flex;
-  justify-content: flex-end; /* Alinhamento horizontal à direita */
-  align-items: center; /* Alinhamento vertical no centro */
-  flex-wrap: wrap; /* Permitir que os elementos quebrem para a próxima linha em telas menores */
+  justify-content: flex-end; 
+  align-items: center; 
+  flex-wrap: wrap; 
 }
 
 .content {
-  flex: 1; /* Ocupa todo o espaço disponível à esquerda do elemento .box */
+  flex: 1; 
 }
 
 .box {
@@ -15,7 +18,7 @@
   background-color: #fff;
   border-radius: 10px;
   padding: 20px;
-  margin-right: 5%; /* Distância à direita em relação à largura da viewport */
+  margin-right: 5%; 
 }
 
 .titulo {
@@ -24,33 +27,64 @@
 
 .titulo2 {
   text-align:end;
-  text-justify: ju;
 }
 
 .button-container {
-  text-align: center; /* Centralize o botão horizontalmente */
-  margin-top: 20px; /* Adicione margem acima do botão para separá-lo do texto (ajuste conforme necessário) */
+  text-align: center; 
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  margin-top: 20px; 
 }
 
 .saiba-mais-button {
-  background-color: #007bff; /* Cor de fundo do botão (ajuste conforme necessário) */
-  color: #fff; /* Cor do texto do botão (ajuste conforme necessário) */
+  background-color: #ffd900;
+  color: #000000; 
   border: none;
-  padding: 10px 20px; /* Espaçamento interno do botão (ajuste conforme necessário) */
-  font-size: 16px; /* Tamanho da fonte (ajuste conforme necessário) */
+  padding: 10px 20px; 
+  font-size: 150%;
+  font-weight: 700; 
   cursor: pointer;
-  border-radius: 5px; /* Borda arredondada (ajuste conforme necessário) */
+  border-radius: 5px;
+  font-family: 'Rubik', sans-serif;  
+  transition: background-color 0.3s ease;
+ 
+}
+
+.saiba-mais-button:hover {
+  background-color: #000000;
+  color: #ffffff; 
+  font-size: 165%;
+  transition: font-size 0.3s ease;
+}
+
+.saiba-mais-button:not(:hover){
+  transition: font-size 0.2s ease;
+  font-size: 150%;
 }
 
 
 @media (max-width: 768px) {
   .box-container {
-    flex-direction: column; /* Empilhe os elementos verticalmente em telas menores */
-    align-items: center; /* Centralize na vertical em telas menores */
+    flex-direction: column; 
+    align-items: center;
   }
 
   .box {
     width: 100%;
-    margin-right: 0; /* Remova a margem à direita em telas menores */
+    margin-right: 0; 
+  }
+
+  .titulo {
+    text-align: center;
+    padding: 1%;
+  }
+  
+  .titulo2 {
+    text-align: justify;
+    font-size: 150%;
+    
+    padding-right: 15%;
+    
   }
 }
