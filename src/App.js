@@ -1,7 +1,8 @@
 import './App.css';
-import Cabecalho from './Cabecalho';
-import Landing from './Landing';
-import Rodape from './Rodape';
+import Cabecalho from './components/Cabecalho';
+import Landing from './pages/Landing';
+import Rodape from './components/Rodape';
+
 
 
 function App() {

@@ -1,6 +1,6 @@
 import React from 'react';
-import './Landing.css';
-import './images/index.png';
+import '../styles/Landing.css';
+import '../images/index.png';
 
 function Landing() {
   return (
@@ -14,7 +14,7 @@ function Landing() {
           <button className="saiba-mais-button">Saiba Mais ⚡</button>
         </div>
       </div>
-      <img className="box" src={require('./images/index.png')} alt="Imagem Smart Grid" />
+      <img className="box" src={require('../images/index.png')} alt="Imagem Smart Grid" />
     </div>
   );
 }
