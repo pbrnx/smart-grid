@@ -2,15 +2,11 @@ import React from 'react';
 import '../styles/Form.css';
 
 
-function Cadastro() {
+function Login() {
   return (
     <>
-    <h1>Cadastre-se no nosso projeto!</h1>
-    <form>
-        <label for="loginUsername">Usuário:</label>
-        <input type="text" required/>
-        <br/>
-    
+    <h1>Faça Login!</h1>
+    <form>    
         <label for="loginPassword">Email:</label>
         <input type="text"  required/>
         <br/>
@@ -27,4 +23,4 @@ function Cadastro() {
   );
 }
 
-export default Cadastro;
+export default Login;
