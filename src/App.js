@@ -2,15 +2,17 @@ import './App.css';
 import Cabecalho from './components/Cabecalho';
 import Landing from './pages/Landing';
 import Rodape from './components/Rodape';
+import Cadastro from './pages/Cadastro';
 
 
 
 function App() {
   return (
     <>
-    <Cabecalho></Cabecalho>
-    <Landing></Landing>
-    <Rodape></Rodape>
+    <Cabecalho/>
+    <Landing/>
+    <Rodape/>
+    
     </>
   );
 }
