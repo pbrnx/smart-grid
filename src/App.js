@@ -4,6 +4,7 @@ import Landing from './pages/Landing';
 import Rodape from './components/Rodape';
 import Cadastro from  './pages/Cadastro';
 import Login from './pages/Login';
+import Projeto from './pages/Projeto';
 import { BrowserRouter, Route, Switch} from 'react-router-dom';
 
 function App() {
@@ -19,7 +20,7 @@ function App() {
         </Route> 
 
         <Route exact path='/nosso-projeto'>
-          <projeto/>
+          <Projeto/>
         </Route>
 
         <Route exact path='/cadastro'>
