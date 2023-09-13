@@ -47,6 +47,7 @@
   cursor: pointer;
   border-radius: 5px;
   font-family: 'Rubik', sans-serif;  
+  text-decoration: none;
   transition: background-color 0.3s ease;
  
 }

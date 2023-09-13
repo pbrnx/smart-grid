@@ -6,24 +6,30 @@ import Cadastro from  './pages/Cadastro';
 import Login from './pages/Login';
 import { BrowserRouter, Route, Switch} from 'react-router-dom';
 
-
-
 function App() {
   return (
     <>
-  <BrowserRouter>
+    <BrowserRouter>  
     <Cabecalho></Cabecalho>
     <div className='content'>
       <Switch>
+        
         <Route exact path='/'>
           <Landing/>
         </Route> 
+
+        <Route exact path='/nosso-projeto'>
+          <projeto/>
+        </Route>
+
         <Route exact path='/cadastro'>
           <Cadastro />
         </Route>  
+
         <Route exact path='/login'>
           <Login />
         </Route>  
+
       </Switch>
     </div>
     <Rodape></Rodape>

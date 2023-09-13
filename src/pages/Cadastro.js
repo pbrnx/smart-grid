@@ -5,18 +5,18 @@ import '../styles/Form.css';
 function Cadastro() {
   return (
     <>
-    <h1>Cadastre-se no nosso projeto!</h1>
+    <h1>Cadastre-se e faça parte do nosso projeto!</h1>
     <form>
-        <label for="loginUsername">Usuário:</label>
-        <input type="text" required/>
+        <label htmlFor="loginUsername">Nome:</label>
+        <input type="text" placeholder='Digite seu nome completo'required/>
         <br/>
     
-        <label for="loginPassword">Email:</label>
-        <input type="text"  required/>
+        <label htmlFor="loginPassword">Email:</label>
+        <input type="text" placeholder='Digite seu Email'required/>
         <br/>
 
-        <label for="loginPassword">Senha:</label>
-        <input type="password" id="loginPassword" name="password" required/>
+        <label htmlFor="loginPassword">Senha:</label>
+        <input type="password" id="loginPassword" placeholder="Digite sua senha" equired/>
         <br/>
     
         <button type="button" id="loginButton">Cadastrar</button>
