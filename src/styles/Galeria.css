@@ -1,0 +1,26 @@
+*  {margin: 0}
+
+.gallery{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    position: relative;
+    zoom: 20%;
+    padding-bottom:5%;
+    height: 100%;
+}
+
+.imgGaleria{
+    aspect-ratio: 9/16;
+    min-width: 0;
+  
+    flex: 1 1 10px;
+    object-fit: cover;
+    opacity: .5;
+    transition: .5s;
+}
+
+.imgGaleria:hover{
+    flex: 1 1 100px;
+    opacity: 1;
+}
