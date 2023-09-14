@@ -9,15 +9,20 @@
 }
 
 img.imgP1 {
-    width: 45%; /* Largura da imagem */
+    width: 40%; /* Largura da imagem */
     max-width: 50%; /* Largura máxima da imagem (ajuste conforme necessário) */
     border-radius: 15px;
 }
 
 .h1Proj, .h2Proj {
-    text-align: left;
     padding-left: 4%;
+    
 }
+
+.h2Proj{
+    font-size:25px;
+}
+
 
 .paragrafo {
     padding-left: 2%;
@@ -27,11 +32,19 @@ img.imgP1 {
     font-size: 20px;
 }
 
+.paragrafo2 {
+    padding-left: 4%;
+    font-size: 20px;
+    padding-bottom: 1%;
+    padding-right: 2%;
+}
+
 .lista {
     padding-left: 4%;
     text-align: justify;
     font-size: 18px;
     padding-bottom:2%;
+    padding-right: 2%;
 }
 
 @media (max-width: 768px) {

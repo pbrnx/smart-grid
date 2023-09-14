@@ -31,7 +31,7 @@ input[type="password"] {
     border-radius: 4px;
 }
 
-button[type="button"] {
+#loginButton {
     background-color: #ffd900;
     color: #000000; 
     border: none;
@@ -42,16 +42,26 @@ button[type="button"] {
     border-radius: 5px;
     font-family: 'Rubik', sans-serif;  
     transition: background-color 0.3s ease;
+    margin-right: 3%;
+    margin-left: 3%; 
+    
 }
 
 
-button[type="button"]:hover {
+#loginButton:hover {
     background-color: #000000;
     color: #ffffff; 
-
   }
   
-  button[type="button"]:not(:hover){
+  #loginButton:not(:hover){
     transition: background-color 0.3s ease;
-    
   }
+
+.containerLoginButton{
+    display: flex;
+    flex-direction: row;
+    max-width: 30%;
+    text-align: center;
+   
+}
+
