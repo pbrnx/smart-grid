@@ -8,17 +8,17 @@ function Login() {
   const history = useHistory();
 
   const checkPreviousLogin = () => {
-    // Check if the user is already logged in using sessionStorage
+    
     const isLoggedIn = sessionStorage.getItem('isLoggedIn');
 
     if (isLoggedIn) {
-      alert('Você já está logado, Usuário.');
-      // Redirect to another route (e.g., dashboard) if needed
-      history.push('/dashboard'); // Replace '/dashboard' with the actual route
-      return true; // Return true if already logged in
+      alert('Você já está logado.');
+    
+      history.push('/'); 
+      return true; 
     }
 
-    return false; // Return false if not logged in
+    return false; 
   };
 
   const handleEmailChange = (event) => {
@@ -33,28 +33,30 @@ function Login() {
     const isAlreadyLoggedIn = checkPreviousLogin();
 
     if (isAlreadyLoggedIn) {
-      return; // Do not proceed with login if already logged in
+      return; 
     }
 
     const cadastros = JSON.parse(localStorage.getItem('users')) || [];
     const user = cadastros.find((cadastro) => cadastro.email === email.trim() && cadastro.senha === senha.trim());
 
     if (user) {
-      // Set a sessionStorage flag to remember the user's login status
+ 
       sessionStorage.setItem('isLoggedIn', 'true');
 
       alert("Login bem sucedido! Bem-vindo " + user.nome + "!");
-      history.push('/dashboard'); // Redirect to another route after successful login
+      history.push('/'); 
     } else {
       alert("Credenciais de Login não encontradas.");
     }
   };
 
   const handleLogout = () => {
-    // Clear the sessionStorage flag to log the user out
+    
     sessionStorage.removeItem('isLoggedIn');
-    // Optionally, you can also clear other session data or perform other logout tasks
+    
     alert('Você foi desconectado.');
+    history.push('/');
+
   };
 
   return (

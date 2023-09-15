@@ -31,7 +31,7 @@ function Cadastro() {
     // Validate the form inputs
     if (nome.length === 0 || email.length === 0 || senha.length === 0 || !checkboxChecked || !checkMail.includes('@')) {
       alert("Verifique se preencheu todos os campos corretamente!");
-      return; // Exit early if validation fails
+      return;
     }
 
     // Retrieve existing users from localStorage or initialize an empty array
