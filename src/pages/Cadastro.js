@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import '../styles/Form.css';
 
 function Cadastro() {
@@ -6,6 +7,8 @@ function Cadastro() {
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
   const [checkboxChecked, setCheckboxChecked] = useState(false);
+
+  const history = useHistory(); 
 
   const handleNomeChange = (event) => {
     setNome(event.target.value);
@@ -28,21 +31,19 @@ function Cadastro() {
 
     const checkMail = email.trim();
 
-    
     if (nome.length === 0 || email.length === 0 || senha.length === 0 || !checkboxChecked || !checkMail.includes('@')) {
       alert("Verifique se preencheu todos os campos corretamente!");
       return;
     }
 
-    
     const existingUsers = JSON.parse(localStorage.getItem('users')) || [];
 
-    
     const userExists = existingUsers.some((user) => user.email === email);
 
     if (userExists) {
       alert("Este email já está cadastrado!");
-      return; 
+      history.push('/login');
+      return;
     }
 
     const newUser = {
@@ -50,7 +51,6 @@ function Cadastro() {
       email,
       senha,
     };
-
 
     existingUsers.push(newUser);
     localStorage.setItem('users', JSON.stringify(existingUsers));
@@ -60,7 +60,8 @@ function Cadastro() {
     setSenha('');
     setCheckboxChecked(false);
 
-    alert('Cadastro realizado com sucesso!');
+    alert('Cadastro realizado com sucesso! \nObrigado por fazer parte do Smart Grid');
+    history.push('/login'); 
   };
 
   return (

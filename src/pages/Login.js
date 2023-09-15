@@ -17,7 +17,6 @@ function Login() {
       history.push('/'); 
       return true; 
     }
-
     return false; 
   };
 
@@ -40,20 +39,16 @@ function Login() {
     const user = cadastros.find((cadastro) => cadastro.email === email.trim() && cadastro.senha === senha.trim());
 
     if (user) {
- 
       sessionStorage.setItem('isLoggedIn', 'true');
-
-      alert("Login bem sucedido! Bem-vindo " + user.nome + "!");
+      alert("Login bem sucedido! Bem-vindo(a) " + user.nome + "!");
       history.push('/'); 
     } else {
       alert("Credenciais de Login não encontradas.");
     }
   };
 
-  const handleLogout = () => {
-    
+  const handleLogout = () => {  
     sessionStorage.removeItem('isLoggedIn');
-    
     alert('Você foi desconectado.');
     history.push('/');
 

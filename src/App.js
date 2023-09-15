@@ -12,7 +12,7 @@ function App() {
   return (
     <>
     <Helmet>
-      <title>Smartgrid</title>
+      <title>Smart Grid | Conectando o Futuro</title>
     </Helmet>
     <BrowserRouter>  
 
