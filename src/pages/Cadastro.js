@@ -28,16 +28,16 @@ function Cadastro() {
 
     const checkMail = email.trim();
 
-    // Validate the form inputs
+    
     if (nome.length === 0 || email.length === 0 || senha.length === 0 || !checkboxChecked || !checkMail.includes('@')) {
       alert("Verifique se preencheu todos os campos corretamente!");
       return;
     }
 
-    // Retrieve existing users from localStorage or initialize an empty array
+    
     const existingUsers = JSON.parse(localStorage.getItem('users')) || [];
 
-    // Check if the email already exists in the list of users
+    
     const userExists = existingUsers.some((user) => user.email === email);
 
     if (userExists) {

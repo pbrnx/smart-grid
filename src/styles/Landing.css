@@ -35,32 +35,7 @@
   padding: 20px; 
 }
 
-.saiba-mais-button {
-  background-color: #ffd900;
-  color: #000000; 
-  border: none;
-  padding: 10px 20px; 
-  font-size: 150%;
-  font-weight: 700; 
-  cursor: pointer;
-  border-radius: 5px;
-  font-family: 'Rubik', sans-serif;  
-  text-decoration: none;
-  transition: background-color 0.3s ease;
- 
-}
 
-.saiba-mais-button:hover {
-  background-color: #000000;
-  color: #ffffff; 
-  font-size: 165%;
-  transition: font-size 0.3s ease;
-}
-
-.saiba-mais-button:not(:hover){
-  transition: font-size 0.2s ease;
-  font-size: 150%;
-}
 
 
 @media (max-width: 768px) {

@@ -5,16 +5,20 @@ import Rodape from './components/Rodape';
 import Cadastro from  './pages/Cadastro';
 import Login from './pages/Login';
 import Projeto from './pages/Projeto';
+import { Helmet } from 'react-helmet';
 import { BrowserRouter, Route, Switch} from 'react-router-dom';
 
 function App() {
   return (
     <>
+    <Helmet>
+      <title>Smartgrid</title>
+    </Helmet>
     <BrowserRouter>  
+
     <Cabecalho></Cabecalho>
     <div className='content'>
-      <Switch>
-        
+      <Switch>     
         <Route exact path='/'>
           <Landing/>
         </Route> 
