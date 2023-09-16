@@ -9,7 +9,7 @@ function Projeto() {
             <div className='paragrafo-container'>
             
                 <p className='paragrafo'>
-                <h2> O que é? </h2><br/>
+                <h2> O que é? </h2>
                     Smart grid é um sistema de distribuição de energia elétrica que utiliza tecnologias avançadas de comunicação e controle para permitir uma gestão mais eficiente e inteligente da rede elétrica. Com o uso de sensores e dispositivos de monitoramento em tempo real, a smart grid é capaz de detectar problemas de energia, identificar falhas em equipamentos e até mesmo fornecer informações sobre o consumo de energia dos usuários finais. Além disso, a smart grid também possibilita a integração de fontes de energia renovável, como painéis solares e turbinas eólicas, na rede elétrica, permitindo uma melhor utilização dos recursos energéticos disponíveis.
                 </p>
                 <img className='imgP1' src={require('../images/paragrafo1.jpg')} alt='Imagem' />
@@ -23,7 +23,7 @@ function Projeto() {
                 <li><b>Aumento do consumo de energia elétrica:</b> Com o crescimento da população e da economia do país, houve um aumento significativo do consumo de energia elétrica nos últimos anos, o que tem sobrecarregado o sistema elétrico.</li>
                 <li><b>Falta de investimentos em novas fontes de energia:</b> O Brasil tem um grande potencial para a geração de energia a partir de fontes renováveis, como solar, eólica e biomassa, mas os investimentos nesse setor têm sido insuficientes para suprir a demanda crescente de energia elétrica.</li>
             </ul>
-            <h2 className='h2Proj'>Galeria de Imagens:</h2><br/>
+            <h2 className='h2Proj'>Galeria de Imagens:</h2>
             <Galeria />
         </>
     )
