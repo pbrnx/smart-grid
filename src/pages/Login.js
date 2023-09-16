@@ -60,11 +60,11 @@ function Login() {
       <form>
         <label htmlFor="loginPassword">Email:</label>
         <input type="text" placeholder="Digite seu email" required value={email} onChange={handleEmailChange} />
-        <br />
+      
 
         <label htmlFor="loginPassword">Senha:</label>
         <input type="password" id="loginPassword" placeholder="Digite sua senha" required value={senha} onChange={handleSenhaChange} />
-        <br />
+      
         <div className='containerLoginButton'>
           <button type="button" id='loginButton' onClick={handleLogin}>Login</button>
           <button type="button" id='loginButton' onClick={handleLogout}>Logout</button>
