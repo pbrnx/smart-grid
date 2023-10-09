@@ -4,7 +4,7 @@ Mauricio Santos Rodrigues                RM: 551076
 Vitor Reyes Souza                        RM: 550766
 Luis Serafin Bezagio Mendieta            RM: 551588
 
-Para acessar a build do projeto: http://dominioaulasfiap.infinityfreeapp.com/index.html ou siga o passo a passo
+Para acessar a build do projeto: http://dominioaulasfiap.infinityfreeapp.com/ ou siga o passo a passo
 
 Abra o terminal com privilégios de admin no caminho da pasta e digite os seguintes comandos:
 $ npm install -g serve
