@@ -1,14 +1,8 @@
-Pedro Augusto Carneiro Barone Bomfim     RM: 99781
-João Pedro de Albuquerque Oliveira       RM: 551579
-Mauricio Santos Rodrigues                RM: 551076
-Vitor Reyes Souza                        RM: 550766
-Luis Serafin Bezagio Mendieta            RM: 551588
+# React + Vite
 
-Para acessar a build do projeto: http://dominioaulasfiap.infinityfreeapp.com/ ou siga o passo a passo
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Abra o terminal com privilégios de admin no caminho da pasta e digite os seguintes comandos:
-$ npm install -g serve
-$ Set-ExecutionPolicy RemoteSigned
-$ serve -s build
+Currently, two official plugins are available:
 
-Cadastre seu próprio usuário e o acesse via página de login. 
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh

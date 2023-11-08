@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
 
-
 .box-container {
   display: flex;
   justify-content: flex-end; 
@@ -42,10 +41,11 @@
   .box-container {
     flex-direction: column; 
     align-items: center;
+    
   }
 
   .box {
-    width: 100%;
+    width: 90%;
     margin-right: 0; 
   }
 
@@ -55,10 +55,8 @@
   }
   
   .titulo2 {
-    text-align: justify;
+    text-align: center;
     font-size: 150%;
-    
-    padding-right: 15%;
     
   }
 }
