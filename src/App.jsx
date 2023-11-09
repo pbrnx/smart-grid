@@ -6,7 +6,10 @@ import Cadastro from  './routes/Cadastro';
 import Login from './routes/Login';
 import Projeto from './routes/Projeto';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-function App() {
+
+
+
+export default function App() {
   return (
     <>
       <BrowserRouter>
@@ -24,6 +27,4 @@ function App() {
     </>
   );
 }
-
-
-export default App;
+ 
