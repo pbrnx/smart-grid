@@ -1,16 +1,18 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 import '../styles/Form.scss';
 
 function Cadastro() {
-  document.title = "Smart Grid | Cadastre-se";
+  // State declarations
   const [nome, setNome] = useState('');
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
   const [checkboxChecked, setCheckboxChecked] = useState(false);
 
-  const history = useNavigate(); 
+  // Navigation hook
+  const history = useNavigate();
 
+  // Handlers for form inputs
   const handleNomeChange = (event) => {
     setNome(event.target.value);
   };
@@ -27,7 +29,8 @@ function Cadastro() {
     setCheckboxChecked(event.target.checked);
   };
 
-  const handleSubmit = (event) => {
+  // Form submission handler
+  const handleSubmit = async (event) => {
     event.preventDefault();
 
     const checkMail = email.trim();
@@ -37,37 +40,44 @@ function Cadastro() {
       return;
     }
 
-    const existingUsers = JSON.parse(localStorage.getItem('users')) || [];
-
-    const userExists = existingUsers.some((user) => user.email === email);
-
-    if (userExists) {
-      alert("Este email já está cadastrado!");
-      history.push('/login');
-      return;
-    }
-
     const newUser = {
       nome,
       email,
       senha,
     };
 
-    existingUsers.push(newUser);
-    localStorage.setItem('users', JSON.stringify(existingUsers));
+    try {
+      const response = await fetch('http://localhost:3000/users', { // Ensure you have 'http://' in your URL
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(newUser),
+      });
 
-    setNome('');
-    setEmail('');
-    setSenha('');
-    setCheckboxChecked(false);
+      if (!response.ok) {
+        throw new Error('Erro ao cadastrar. Tente novamente.');
+      }
 
-    alert('Cadastro realizado com sucesso! \nObrigado por fazer parte do Smart Grid');
-    history.push('/login'); 
+      const result = await response.json();
+
+      if (result.userExists) {
+        alert("Este email já está cadastrado!");
+        history.push('/login');
+        return;
+      }
+
+      alert('Cadastro realizado com sucesso! \nObrigado por fazer parte do Smart Grid');
+      history.push('/login'); 
+    } catch (error) {
+      alert(error.message);
+    }
   };
 
+  // Component return
   return (
     <>
-      <h1>Cadastre-se e faça parte do nosso projeto!</h1>
+ <h1>Cadastre-se e faça parte do nosso projeto!</h1>
       <form onSubmit={handleSubmit}>
         <label htmlFor="loginUsername">Nome:</label>
         <input type="text" placeholder='Digite seu nome completo' required value={nome} onChange={handleNomeChange} />
