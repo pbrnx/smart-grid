@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import '../styles/Form.css';
+import '../styles/Form.scss';
 
 function Cadastro() {
   const [nome, setNome] = useState('');

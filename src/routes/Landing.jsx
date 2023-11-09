@@ -1,7 +1,8 @@
 import React from 'react';
 import '../styles/Landing.css';
-import indexImage from '../images/index.png';
+
 import { Saibamais } from '../components/Saibamais';
+import MyCarousel from '../components/Carousel';
 
 function Landing() {
   return (
@@ -13,8 +14,9 @@ function Landing() {
           <Saibamais to='/nosso-projeto' className="saiba-mais-button">Saiba Mais ⚡</Saibamais>
         </div>
       </div>
-      <img className="box" src={(indexImage)} alt="Imagem Smart Grid" />
+      <MyCarousel />
     </div>
+    
   );
 }
 
