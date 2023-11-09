@@ -1,5 +1,4 @@
-import '../styles/Projeto.css';
-import '../styles/Galeria.css';
+import '../styles/Projeto.scss';
 import imgGaleria1 from '../images/proj1.jpg';
 import imgGaleria2 from '../images/proj2.jpg';
 import imgGaleria3 from '../images/proj3.jpg';

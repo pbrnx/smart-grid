@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/Landing.css';
+import '../styles/Landing.scss';
 
 import { Saibamais } from '../components/Saibamais';
 import MyCarousel from '../components/Carousel';
