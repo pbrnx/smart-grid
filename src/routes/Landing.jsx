@@ -5,6 +5,7 @@ import { Saibamais } from '../components/Saibamais';
 import MyCarousel from '../components/Carousel';
 
 function Landing() {
+  document.title = "Smart Grid | Moldando o Futuro";
   return (
     <div className="box-container">
       <div className="content">

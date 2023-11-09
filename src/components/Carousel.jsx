@@ -5,6 +5,7 @@ import "../styles/Landing.scss";
 import smart1 from "../images/smart1.png";
 import smart2 from "../images/smart2.png"; 
 import smart3 from "../images/smart3.png"; 
+import smart4 from "../images/smart4.png"; 
 
 function MyCarousel() {
   return (
@@ -17,6 +18,9 @@ function MyCarousel() {
       </Carousel.Item>
       <Carousel.Item interval={1000}>
         <img className="d-block w-100 " src={smart2} alt="Third slide" /> 
+      </Carousel.Item>
+      <Carousel.Item interval={1000}>
+        <img className="d-block w-100 " src={smart4} alt="Fourth slide" /> 
       </Carousel.Item>
     </Carousel>
   );

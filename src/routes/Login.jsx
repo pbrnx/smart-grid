@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import '../styles/Form.scss';
 
 function Login() {
+  document.title = "Smart Grid | Login";
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
   const history = useNavigate();

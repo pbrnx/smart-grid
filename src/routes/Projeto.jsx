@@ -6,6 +6,7 @@ import imgGaleria4 from '../images/proj4.jpg';
 import imgTexto from '../images/paragrafo1.jpg';
 
 export default function Projeto() {
+    document.title = "Smart Grid | Nosso Projeto";
     return (
         <>
             <h1 className='h1Proj'>Smart Grid</h1>
