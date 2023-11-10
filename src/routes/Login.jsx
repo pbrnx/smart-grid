@@ -2,7 +2,26 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../styles/Form.scss';
 
+
+
 function Login() {
+
+  function generateToken() {
+    const array = new Uint32Array(1);
+    window.crypto.getRandomValues(array);
+    return array[0].toString(16);
+  }
+  
+  function createSession() {
+    if (!sessionStorage.getItem('sessionToken')) {
+      sessionStorage.setItem('sessionToken', generateToken());
+    } else {
+      console.log('Uma sessão já está ativa.');
+    }
+  }
+  
+  createSession();
+  
   document.title = "Smart Grid | Login";
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
@@ -49,10 +68,14 @@ function Login() {
   };
 
   const handleLogout = () => {  
-    sessionStorage.removeItem('isLoggedIn');
-    alert('Você foi desconectado.');
-    history('/');
+  sessionStorage.removeItem('isLoggedIn');
+  sessionStorage.removeItem('sessionToken'); 
 
+  
+  sessionStorage.setItem('sessionToken', generateToken());
+
+  alert('Você foi desconectado.');
+  history('/'); 
   };
 
   return (

@@ -1,46 +1,10 @@
 {
   "users": [
     {
-      "nome": "Pedro",
-      "email": "pedrobarone2709@gmail.com",
-      "senha": "Pedro153045",
+      "nome": "Hugo",
+      "email": "teste@hugo.com",
+      "senha": "SenhaHugo",
       "id": 1
-    },
-    {
-      "nome": "Pedro Barone",
-      "email": "pedrobarone2709@gmail.com",
-      "senha": "Pedro153045",
-      "id": 2
-    },
-    {
-      "nome": "aFAfa",
-      "email": "pedrobarone2709@gmail.com",
-      "senha": "Pedro153045",
-      "id": 3
-    },
-    {
-      "nome": "aFAfa",
-      "email": "pedrobarone2709@gmail.com",
-      "senha": "Pedro153045",
-      "id": 4
-    },
-    {
-      "nome": "123",
-      "email": "pedrobarone2709@gmail.com",
-      "senha": "Pedro153045",
-      "id": 5
-    },
-    {
-      "nome": "123",
-      "email": "pedrobarone2709@gmail.com",
-      "senha": "Pedro153045",
-      "id": 6
-    },
-    {
-      "nome": "Pedro",
-      "email": "pedrobarone2709@gmail.com.br",
-      "senha": "Pedro153045",
-      "id": 7
     }
   ]
 }
