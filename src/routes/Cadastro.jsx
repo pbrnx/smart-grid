@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import '../styles/Form.scss';
 
 function Cadastro() {
-  
+  document.title = "Smart Grid | Cadastre-se";
   const [nome, setNome] = useState('');
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
