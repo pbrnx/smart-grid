@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../styles/Form.scss';
 
-
-
 function Login() {
 
   function generateToken() {
@@ -28,12 +26,10 @@ function Login() {
   const history = useNavigate();
 
   const checkPreviousLogin = () => {
-    
     const isLoggedIn = sessionStorage.getItem('isLoggedIn');
 
     if (isLoggedIn) {
       alert('Você já está logado.');
-    
       history('/'); 
       return true; 
     }
@@ -48,34 +44,40 @@ function Login() {
     setSenha(event.target.value);
   };
 
-  const handleLogin = () => {
+  const handleLogin = async () => {
     const isAlreadyLoggedIn = checkPreviousLogin();
 
     if (isAlreadyLoggedIn) {
       return; 
     }
 
-    const cadastros = JSON.parse(localStorage.getItem('users')) || [];
-    const user = cadastros.find((cadastro) => cadastro.email === email.trim() && cadastro.senha === senha.trim());
+    // Fetch dados da API
+    try {
+      const response = await fetch('http://localhost:3000/users');
+      if (!response.ok) {
+        throw new Error('Erro ao buscar usuários.');
+      }
+      const users = await response.json();
+      const user = users.find(user => user.email === email.trim() && user.senha === senha.trim());
 
-    if (user) {
-      sessionStorage.setItem('isLoggedIn', 'true');
-      alert("Login bem sucedido! Bem-vindo(a) " + user.nome + "!");
-      history('/'); 
-    } else {
-      alert("Credenciais de Login não encontradas.");
+      if (user) {
+        sessionStorage.setItem('isLoggedIn', 'true');
+        alert("Login bem sucedido! Bem-vindo(a) " + user.nome + "!");
+        history('/'); 
+      } else {
+        alert("Credenciais de Login não encontradas.");
+      }
+    } catch (error) {
+      alert("Erro ao validar o login: " + error.message);
     }
   };
 
   const handleLogout = () => {  
-  sessionStorage.removeItem('isLoggedIn');
-  sessionStorage.removeItem('sessionToken'); 
-
-  
-  sessionStorage.setItem('sessionToken', generateToken());
-
-  alert('Você foi desconectado.');
-  history('/'); 
+    sessionStorage.removeItem('isLoggedIn');
+    sessionStorage.removeItem('sessionToken'); 
+    sessionStorage.setItem('sessionToken', generateToken());
+    alert('Você foi desconectado.');
+    history('/'); 
   };
 
   return (
