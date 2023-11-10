@@ -1,3 +1,5 @@
+Nosso deploy na Netlify já foi feito nessa URL: https://smartgridproject.netlify.app/nosso-projeto
+
 # Aplicação Smartgrid
 
 Uma aplicação que demonstra o que a smartgrid é, simulando cadastro e login via API Json.
@@ -27,4 +29,3 @@ A aplicação deve ser iniciada em qualquer porta que **NÃO** seja a 3000, já 
 
 ## Informações Adicionais
 
-Nosso deploy na Netlify já foi feito nessa URL: 
