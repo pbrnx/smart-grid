@@ -15,7 +15,9 @@ export default function Projeto() {
                 <h2> O que é? </h2><br/>
                     Smart grid é um sistema de distribuição de energia elétrica que utiliza tecnologias avançadas de comunicação e controle para permitir uma gestão mais eficiente e inteligente da rede elétrica. Com o uso de sensores e dispositivos de monitoramento em tempo real, a smart grid é capaz de detectar problemas de energia, identificar falhas em equipamentos e até mesmo fornecer informações sobre o consumo de energia dos usuários finais. Além disso, a smart grid também possibilita a integração de fontes de energia renovável, como painéis solares e turbinas eólicas, na rede elétrica, permitindo uma melhor utilização dos recursos energéticos disponíveis.
                 </p>
-                <img className='imgP1' src={(imgTexto)} alt='Imagem' />
+                <div className='img-container'>
+                    <img className='imgP1' src={imgTexto} alt='Descrição da imagem' />
+                </div>
             </div>
             <h2 className='h2Proj'>Por que utilizar?</h2>
             <p className='paragrafo2'>

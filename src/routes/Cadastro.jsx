@@ -3,16 +3,14 @@ import { useNavigate } from "react-router-dom";
 import '../styles/Form.scss';
 
 function Cadastro() {
-  // State declarations
+  
   const [nome, setNome] = useState('');
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
   const [checkboxChecked, setCheckboxChecked] = useState(false);
-
-  // Navigation hook
+  
   const history = useNavigate();
 
-  // Handlers for form inputs
   const handleNomeChange = (event) => {
     setNome(event.target.value);
   };
@@ -29,17 +27,40 @@ function Cadastro() {
     setCheckboxChecked(event.target.checked);
   };
 
-  // Form submission handler
+  // Função para verificar se o e-mail já existe na base de dados
+  const verifyUserExists = async (emailToCheck) => {
+    try {
+      const response = await fetch('http://localhost:3000/users');
+      if (!response.ok) {
+        throw new Error('Erro ao buscar usuários.');
+      }
+      const users = await response.json();
+      return users.some(user => user.email === emailToCheck);
+    } catch (error) {
+      console.error('Erro ao verificar o usuário:', error);
+      return false; // Se houver erro, prosseguir como se o usuário não existisse
+    }
+  }
+
   const handleSubmit = async (event) => {
     event.preventDefault();
 
+    // Verifica se todos os campos foram preenchidos e se o e-mail é válido
     const checkMail = email.trim();
-
     if (nome.length === 0 || email.length === 0 || senha.length === 0 || !checkboxChecked || !checkMail.includes('@')) {
       alert("Verifique se preencheu todos os campos corretamente!");
       return;
     }
 
+    // Verifica se o e-mail já está cadastrado
+    const emailExists = await verifyUserExists(email);
+    if (emailExists) {
+      alert("Este email já está cadastrado!");
+      history('/login');
+      return;
+    }
+
+    // Se o e-mail não existir, prossegue com o cadastro
     const newUser = {
       nome,
       email,
@@ -47,7 +68,7 @@ function Cadastro() {
     };
 
     try {
-      const response = await fetch('http://localhost:3000/users', { // Ensure you have 'http://' in your URL
+      const response = await fetch('http://localhost:3000/users', { 
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -59,22 +80,13 @@ function Cadastro() {
         throw new Error('Erro ao cadastrar. Tente novamente.');
       }
 
-      const result = await response.json();
-
-      if (result.userExists) {
-        alert("Este email já está cadastrado!");
-        history.push('/login');
-        return;
-      }
-
       alert('Cadastro realizado com sucesso! \nObrigado por fazer parte do Smart Grid');
-      history.push('/login'); 
+      history('/login');
     } catch (error) {
       alert(error.message);
     }
   };
 
-  // Component return
   return (
     <>
  <h1>Cadastre-se e faça parte do nosso projeto!</h1>

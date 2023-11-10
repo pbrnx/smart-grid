@@ -1,56 +1,59 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
 
+* {
+    margin: 0;
+}
+
 .paragrafo-container {
     display: flex;
-    flex-direction: row; /* Alinhar imagem e texto na horizontal */
-    align-items: center; /* Alinhar verticalmente */
-    justify-content: space-between; /* Colocar espaço entre a imagem e o texto */
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     padding: 2%;
 }
 
-img.imgP1 {
-    width: 40%; /* Largura da imagem */
-    max-width: 50%; /* Largura máxima da imagem (ajuste conforme necessário) */
+.img-container {
+    min-width: 50%; 
+    
+    overflow: hidden;
     border-radius: 15px;
+    transition: transform 0.5s ease;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); 
+}
+
+img.imgP1 {
+    width: 100%;
+    transition: transform 0.5s ease;
+    display: block;
+}
+
+.img-container:hover img.imgP1 {
+    transform: scale(1.2); 
 }
 
 .h1Proj, .h2Proj {
     padding-left: 4%;
-    
 }
 
-.h2Proj{
-    font-size:25px;
+.h2Proj {
+    font-size: 25px;
 }
 
-
-.paragrafo {
-    padding-left: 2%;
-    padding-bottom: 2%;
-    padding-right: 2%;
+.paragrafo, .paragrafo2 {
+    padding: 2%;
     text-align: justify;
     font-size: 20px;
-}
-
-.paragrafo2 {
-    padding-left: 4%;
-    font-size: 20px;
-    padding-bottom: 1%;
-    padding-right: 2%;
 }
 
 .lista {
     padding-left: 4%;
     text-align: justify;
     font-size: 18px;
-    padding-bottom:2%;
+    padding-bottom: 2%;
     padding-right: 2%;
-
 }
 
-*  {margin: 0}
-
-.gallery{
+.gallery {
     display: flex;
     align-content: center;
     justify-content: center;
@@ -59,33 +62,32 @@ img.imgP1 {
     height: 100%;
 }
 
-.imgGaleria{
+.imgGaleria {
     aspect-ratio: 9/16;
     min-width: 0;
-  
     flex: 1 1 10px;
     object-fit: cover;
     opacity: .5;
     transition: .5s;
 }
 
-.imgGaleria:hover{
+.imgGaleria:hover {
     flex: 1 1 100px;
     opacity: 1;
 }
 
 @media (max-width: 768px) {
     .paragrafo-container {
-        flex-direction: column; /* Alinhar imagem abaixo do texto em dispositivos móveis */
-        align-items: flex-start; /* Alinhar a imagem à esquerda */
-        justify-content: center; /* Centralizar verticalmente */
-        text-align: center; /* Centralizar o texto */
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        text-align: center;
     }
 
-    img.imgP1 {
-        width: 100%; /* Largura total para preencher a largura do dispositivo */
-        max-width: none; /* Remover a largura máxima */
-        margin-top: 10px; /* Espaçamento superior opcional */
+    .img-container, img.imgP1 {
+        width: 100%;
+        max-width: none;
+        margin-top: 10px;
         border-radius: 15px;
     }
 }

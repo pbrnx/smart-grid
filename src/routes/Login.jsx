@@ -15,7 +15,7 @@ function Login() {
     if (isLoggedIn) {
       alert('Você já está logado.');
     
-      history.push('/'); 
+      history('/'); 
       return true; 
     }
     return false; 
@@ -42,7 +42,7 @@ function Login() {
     if (user) {
       sessionStorage.setItem('isLoggedIn', 'true');
       alert("Login bem sucedido! Bem-vindo(a) " + user.nome + "!");
-      history.push('/'); 
+      history('/'); 
     } else {
       alert("Credenciais de Login não encontradas.");
     }
@@ -51,7 +51,7 @@ function Login() {
   const handleLogout = () => {  
     sessionStorage.removeItem('isLoggedIn');
     alert('Você foi desconectado.');
-    history.push('/');
+    history('/');
 
   };
 
