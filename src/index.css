@@ -30,6 +30,7 @@ body {
 
 
 
+
 header {
     background-color: #ffd900;
     color: hsl(0, 0%, 0%);
@@ -86,6 +87,16 @@ nav a:hover {
 
     nav ul{
         background-color: #6b0c0c00;
+    }
+
+    .error {
+        width:100%;
+      
+    }
+
+    .error-container {
+        width:100%;
+      
     }
 
 }
