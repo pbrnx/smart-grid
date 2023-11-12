@@ -28,5 +28,4 @@ npm run dev
 
 A aplicação deve ser iniciada em qualquer porta que **NÃO** seja a 3000, já que essa é a porta da base de dados json onde ficam os usuários.
 
-## Informações Adicionais
 
