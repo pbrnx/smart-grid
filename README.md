@@ -1,4 +1,4 @@
-Nosso deploy na Netlify já foi feito nessa URL: https://smartgridproject.netlify.app/nosso-projeto
+Nosso deploy na Netlify já foi feito nessa URL: https://smartgridproject.netlify.app/
 
 # Aplicação Smartgrid
 
